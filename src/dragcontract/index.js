@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import {render} from 'react-dom';
 import {Group, Text, Rect} from 'react-konva';
 import PropTypes from 'prop-types';
 
-export default class DragContract extends React.Component {
+export default class DragContract extends Component {
   static propTypes = {
     id: PropTypes.string,
     initialX: PropTypes.number,

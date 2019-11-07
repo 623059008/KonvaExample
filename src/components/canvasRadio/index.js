@@ -32,8 +32,6 @@ export default class CanvasRadio extends Component {
     const {
       initialX,
       initialY,
-      districtWidth,
-      districtHeight,
       paddingX,
       paddingY,
       color,
@@ -54,14 +52,7 @@ export default class CanvasRadio extends Component {
     return textStyle;
   }
   getCheckBoxStyle() {
-    const {
-      initialX,
-      initialY,
-      districtWidth,
-      districtHeight,
-      paddingX,
-      paddingY
-    } = this.props;
+    const {initialX, initialY, paddingX, paddingY} = this.props;
     const startX = initialX + paddingX;
     const startY = initialY + paddingY;
     const boxSize = this.boxSize;
@@ -75,15 +66,7 @@ export default class CanvasRadio extends Component {
     }
   }
   getCheckLineStyle() {
-    const {
-      initialX,
-      initialY,
-      districtWidth,
-      districtHeight,
-      paddingX,
-      paddingY,
-      color
-    } = this.props;
+    const {initialX, initialY, paddingX, paddingY, color} = this.props;
     const boxSize = this.boxSize;
     const startX = initialX + paddingX + 2;
     const startY = initialY + paddingY + 3;
