@@ -1,1 +1,13 @@
-<Rect x={this.x} y={this.y} width={this.props.districtWidth} height={this.props.districtHeight} stroke={'white'} strokeWidth={1}/>
+## Canvas + React
+> Powered by Konva
+
+
+All components are drawed by canvas.
+
+Interesting.
+
+### Get Started
+```
+npm install
+npm start
+```
