@@ -85,7 +85,6 @@ export default class CanvasButton extends Component {
     this.setState({buttonFill: '#1A1819', textColor: '#A6A4A8'});
   }
   render() {
-    const {label} = this.props;
     const buttonStyle = this.getButtonStyle();
     const textStyle = this.getTextStyle();
     return (<Group>

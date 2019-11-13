@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Layer, Group, Rect, Line, Text} from 'react-konva';
-import Konva from 'konva';
+import {Group, Rect, Line, Text} from 'react-konva';
 import './index.css';
 import CanvasInput from '../components/canvasInput';
 import CanvasRadio from '../components/canvasRadio';
@@ -212,8 +211,7 @@ class ContractForm extends Component {
 
     const buttonHeight = footerHeight;
     const buttonWidth = backgroundStyle.width / 2;
-    const marginX = 60;
-    const marginY = 10;
+
     const cancelButtonStyle = this.getButtonStyle('cancelButton', x, y + titleHeight + bodyHeight, buttonWidth, buttonHeight, null, null, 'Cancel', this.props.onCancel);
     const deployButtonStyle = this.getButtonStyle('deployButton', x + buttonWidth, y + titleHeight + bodyHeight, buttonWidth, buttonHeight, null, null, 'Deploy', this.submitData);
 

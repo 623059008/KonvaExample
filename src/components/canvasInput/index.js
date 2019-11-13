@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Group, Rect, Line, Text} from 'react-konva';
 import PropTypes from 'prop-types';
-import Konva from 'konva';
 
 export default class CanvasInput extends Component {
   static propTypes = {
@@ -90,28 +89,6 @@ export default class CanvasInput extends Component {
     }
     return textStyle;
   }
-  getInputRectStyle() {
-    const {
-      initialX,
-      initialY,
-      districtWidth,
-      districtHeight,
-      width,
-      height,
-      color,
-      label
-    } = this.props;
-    const startX = initialX + (districtWidth - width * 0.95) / 2;
-    const startY = initialY + (districtHeight - height) / 2 + 20;
-    return {
-      x: startX,
-      y: startY,
-      width: width * 0.95,
-      height: height * 0.4,
-      stroke: 'white',
-      strokeWidth: 0
-    }
-  }
   getInputTextStyle() {
     const {
       initialX,
@@ -119,9 +96,7 @@ export default class CanvasInput extends Component {
       districtWidth,
       districtHeight,
       width,
-      height,
-      color,
-      label
+      height
     } = this.props;
     let text = this.state.content;
     const textSize = 20; // default fontSize in input.
@@ -148,7 +123,9 @@ export default class CanvasInput extends Component {
     let {focus, id, onChangeData} = this.props;
     if (!focus) 
       return;
-    if (e.keyCode > 8 && e.keyCode < 46 && e.keyCode !== 32 || e.keyCode === 91) 
+    if (e.keyCode > 8 && e.keyCode < 46 && e.keyCode !== 32) 
+      return;
+    if (e.keyCode === 91) 
       return;
     if (e.keyCode === 8) {
       content = content.substr(0, content.length - 1);
@@ -164,7 +141,6 @@ export default class CanvasInput extends Component {
   render() {
     const backRectStyle = this.getBackRect();
     const lineStyle = this.getLineStyle();
-    const inputRect = this.getInputRectStyle();
     const inputText = this.getInputTextStyle();
     const labelStyle = this.getLabelStyle();
     return (<Group>

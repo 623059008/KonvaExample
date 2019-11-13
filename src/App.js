@@ -1,12 +1,5 @@
 import React, {Component} from 'react';
-import {
-  Stage,
-  Layer,
-  Group,
-  Rect,
-  Text,
-  Line
-} from 'react-konva';
+import {Stage, Layer, Rect, Text, Line} from 'react-konva';
 import './App.css';
 import Contract from './contract';
 import DragContract from './dragcontract'
@@ -122,7 +115,6 @@ export default class App extends Component {
         {this.state.drag && dragContracts}
         {this.state.drag && <Line {...this.getLineStyle()}/>}
       </Layer>
-
     </Stage>);
   }
 }
