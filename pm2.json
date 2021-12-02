@@ -1,0 +1,15 @@
+{
+  "apps": [{
+    "name": "konvaExample",
+    "script": "serve -s build",
+    "cwd": "/root/KonvaExample/",
+    "exec_mode": "fork",
+    "max_memory_restart": "0.25G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+
+    }
+  }]
+}
