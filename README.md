@@ -1,5 +1,5 @@
 ## Canvas + React
-> Powered by Konva
+> Powered by Konva[https://konvajs.org/]
 
 
 All components are drawed by canvas.
