@@ -22,7 +22,7 @@ export default class CanvasButton extends Component {
     this.state = {
       textColor: '#A6A4A8',
       buttonStroke: '#F4A713',
-      buttonFill: '#1A1819'
+      buttonFill: '#ffffff'
     }
   }
   getButtonStyle() {
@@ -82,7 +82,7 @@ export default class CanvasButton extends Component {
     this.setState({buttonFill: '#F4A713', textColor: '#1A1819'});
   }
   handleMouseLeave = () => {
-    this.setState({buttonFill: '#1A1819', textColor: '#A6A4A8'});
+    this.setState({buttonFill: '#ffffff', textColor: '#A6A4A8'});
   }
   render() {
     const buttonStyle = this.getButtonStyle();

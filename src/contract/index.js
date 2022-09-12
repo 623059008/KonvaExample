@@ -43,8 +43,8 @@ class ContractForm extends Component {
         'supplyInput': 0
       },
       data: {
-        'nameInput': 'ERC20',
-        'symbolInput': 'ERC20',
+        'nameInput': 'Dashboard',
+        'symbolInput': 'Dashboard',
         'decimalInput': '2',
         'supplyInput': '10000000',
         'mintable': false,
@@ -200,20 +200,20 @@ class ContractForm extends Component {
     const decimalInputStyle = this.getInputStyle('decimalInput', x, y + titleHeight + inputHeight, inputWidth, inputHeight, null, null, null, 'decimal', data['decimalInput']);
     const supplyInputStyle = this.getInputStyle('supplyInput', x + inputWidth, y + titleHeight + inputHeight, inputWidth, inputHeight, null, null, null, 'supply', data['supplyInput']);
 
-    const radioGroupText = this.getTextStyle(20, titleHeight + 2 * inputHeight, 40, 20, 'Advance:', 14, 'center', '#797779', 0);
+    const radioGroupText = this.getTextStyle(20, titleHeight + 2 * inputHeight, 40, 20, 'Attributes:', 14, 'center', '#797779', 0);
 
     const radioHeight = bodyHeight / 4;
     const radioWidth = backgroundStyle.width / 4;
     const marginTop = 10;
-    const mintableRadioStyle = this.getRadioStyle('mintableRadio', x, y + titleHeight + 2 * inputHeight + marginTop, radioWidth, radioHeight, 15, 20, null, 'mintable');
-    const freezableRadioStyle = this.getRadioStyle('freezableRadio', x + radioWidth, y + titleHeight + 2 * inputHeight + marginTop, radioWidth, radioHeight, 15, 20, null, 'freezable');
-    const burnableRadioStyle = this.getRadioStyle('burnableRadio', x + radioWidth * 2, y + titleHeight + 2 * inputHeight + marginTop, radioWidth, radioHeight, 15, 20, null, 'burnable');
+    const mintableRadioStyle = this.getRadioStyle('mintableRadio', x, y + titleHeight + 2 * inputHeight + marginTop, radioWidth, radioHeight, 15, 20, null, 'checkbox 1');
+    const freezableRadioStyle = this.getRadioStyle('freezableRadio', x + radioWidth, y + titleHeight + 2 * inputHeight + marginTop, radioWidth, radioHeight, 15, 20, null, 'checkbox 2');
+    const burnableRadioStyle = this.getRadioStyle('burnableRadio', x + radioWidth * 2, y + titleHeight + 2 * inputHeight + marginTop, radioWidth, radioHeight, 15, 20, null, 'checkbox 3');
 
     const buttonHeight = footerHeight;
     const buttonWidth = backgroundStyle.width / 2;
 
     const cancelButtonStyle = this.getButtonStyle('cancelButton', x, y + titleHeight + bodyHeight, buttonWidth, buttonHeight, null, null, 'Cancel', this.props.onCancel);
-    const deployButtonStyle = this.getButtonStyle('deployButton', x + buttonWidth, y + titleHeight + bodyHeight, buttonWidth, buttonHeight, null, null, 'Deploy', this.submitData);
+    const deployButtonStyle = this.getButtonStyle('deployButton', x + buttonWidth, y + titleHeight + bodyHeight, buttonWidth, buttonHeight, null, null, 'Add a Module', this.submitData);
 
     return (<Group>
       <Rect {...backgroundStyle}/>
@@ -221,8 +221,8 @@ class ContractForm extends Component {
       <Line {...titleLineStyle}/>
       <CanvasInput {...nameInputStyle}/>
       <CanvasInput {...symbolInputStyle}/>
-      <CanvasInput {...decimalInputStyle}/>
-      <CanvasInput {...supplyInputStyle}/>
+      {/* <CanvasInput {...decimalInputStyle}/>
+      <CanvasInput {...supplyInputStyle}/> */}
       <Text {...radioGroupText}/>
       <CanvasRadio {...mintableRadioStyle}/>
       <CanvasRadio {...freezableRadioStyle}/>

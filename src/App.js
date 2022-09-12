@@ -8,7 +8,7 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      contract: false,
+      contract: true,
       drag: false,
       connect: {
         '0': [
@@ -29,7 +29,7 @@ export default class App extends Component {
     this.setState({connect});
   }
   getCenterText() {
-    const text = 'Click to Start';
+    const text = 'Show Module Manager';
     const textSize = 30;
     const fontWidth = textSize / 2.25 * text.length;
     const x = (window.innerWidth - fontWidth) / 2;
@@ -41,7 +41,7 @@ export default class App extends Component {
       fontSize: textSize,
       fontFamily: "'Source Code Pro', monospace",
       fill: '#C2C4C3',
-      shadowColor: '#959491',
+      shadowColor: '#ffffff',
       shadowBlur: 10,
       onClick: this.showContract
     }
@@ -101,7 +101,7 @@ export default class App extends Component {
       y: 0,
       width: window.innerWidth,
       height: window.innerHeight,
-      fill: '#1A1819'
+      fill: '#eee'
     }
     const pressTextStyle = this.getCenterText();
     const dragContracts = [];
